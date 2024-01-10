@@ -1,0 +1,13 @@
+.cardForm {
+    align-items: center;
+    padding: 10px;
+  
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    label { 
+        margin: 10px;
+    }
+
+}
