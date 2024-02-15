@@ -4,7 +4,7 @@ import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
 
-const CardForm = () => {
+const CardForm = props => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
 
