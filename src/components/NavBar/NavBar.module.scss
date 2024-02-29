@@ -8,6 +8,8 @@
     
 }
 
+
+
 .icon {
     font-size: 24px;
     margin-left: 40px;
@@ -17,16 +19,29 @@
 .buttons {
     margin-right: 40px;
     margin-top: 20px;
+    li{
+        
+        display: inline-block;
+    }
+
+    a{
+        color: white;
+        font-size: 24px;
+        padding-right: 30px;
+        text-decoration: none;
+    }
+
+    .linkActive {
+        color: $color-warning;
+    }
 }
 
-.link {
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 24px;
-    padding-right: 30px;
-    text-decoration: none;
-}
 
+
+.buttons ul {
+    list-style-type: none;
+     
+    
+}
 
 
