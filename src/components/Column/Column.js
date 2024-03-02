@@ -18,7 +18,7 @@ const Column = ({ id, title, icon, addCard }) => {
                 {title}
             </h2>
             <ul className={styles.cards}>
-                {cards.map(card => <Card key={card.id} title={card.title} />)}
+                {cards.map(card => <Card key={card.id} {...card} />)}
             </ul>
             <CardForm columnId={id} action={addCard} />
         </article>
