@@ -1,7 +1,8 @@
 import styles from './Card.module.scss';
 import { useDispatch } from 'react-redux';
-import { tooglecardfavorite } from '../../redux/store';
 import { clsx } from 'clsx';
+import { tooglecardfavorite, removeCard }  from '../../redux/cardsRedux';
+
 
 const Card = props => {
     const dispatch = useDispatch();
@@ -9,6 +10,11 @@ const Card = props => {
     const handleToggleFavorite = () => {
         dispatch(tooglecardfavorite(props.id));
     };
+
+    const handleRemove = e => {
+        e.preventDefault();
+        dispatch(removeCard (props.id));
+    }
 
 
     return (
@@ -20,6 +26,9 @@ const Card = props => {
                 onClick={handleToggleFavorite}
             >
                 <i className={clsx('fa', { 'fa-star': props.isFavorite, 'fa-star-o': !props.isFavorite }, styles.icon)}></i>
+            </button>
+            <button type="button" onClick={handleRemove}>
+                <i className='fa fa-trash'></i>
             </button>
         </li>
     );
